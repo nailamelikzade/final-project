@@ -318,3 +318,94 @@
     display: block;
     margin-bottom: 4px;
 }
+
+@media (min-width: 1400px) {
+    .predict-container {
+        max-width: 900px;
+        padding: 60px;
+    }
+}
+
+@media (max-width: 992px) {
+    .predict-container {
+        max-width: 700px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .predict-container {
+        padding: 25px 20px;
+        margin: 20px auto;
+    }
+    .predict-title {
+        font-size: 26px;
+    }
+    .uni-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .nav-main {
+        margin-left:80px;
+    }
+    .why-we-title::after{
+      display: none; 
+    }
+    .nav-services,
+    .nav-about,
+    .nav-contact{
+        display: none;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .predict-container {
+        padding: 20px 15px;
+        border-radius: 20px;
+    }
+    .predict-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .nav-links {
+        display: none;
+    }
+    #headerLogo{
+        margin-left: calc(50% - 5px);
+    }
+    .form-group input, 
+    .form-group select {
+        padding: 12px;
+        font-size: 14px;
+    }
+    .predict-btn {
+        padding: 14px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 375px) {
+    .predict-container {
+        padding: 15px 10px;
+    }
+    .nav-links {
+        display: none;
+    }
+    #headerLogo{
+        margin-left: calc(50% - 20px);
+    }
+    .predict-title {
+        font-size: 18px;
+    }
+    .modal-content {
+        padding: 1.5rem;
+    }
+    .uni-card {
+        padding: 15px;
+    }
+    .uni-info h3 {
+        font-size: 18px;
+    }
+}

@@ -19,21 +19,22 @@
         </div>
         <div>
             <nav>
-                <ul>
-                    <li><a href="./index.html">Ana səhifə</a></li>
-                    <li><a href="#">Xidmətlər</a></li>
-                    <li><a href="#">Haqqımızda</a></li>
-                    <li><a href="#">Əlaqə</a></li>
+                <ul class="nav-links">
+                    <li class="nav-main"><a href="./index.html">Ana səhifə</a></li>
+                    <li class="nav-services"><a href="#">Xidmətlər</a></li>
+                    <li class="nav-about"><a href="#">Haqqımızda</a></li>
+                    <li class="nav-contact"><a href="#">Əlaqə</a></li>
                 </ul>
             </nav>
         </div>
-        <div id="profile">
-            <i class="fa-regular fa-circle-user"></i>
-        </div>
+        <div id="profile"></div>
     </header>
 
     <main>
         <div class="predict-container">
+            <!-- <div class="close-btn" id="closePageBtn">&times;</div> -->
+        <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> Geri qayıt</button>
+        
             <h2 class="predict-title"><i class="fa-solid fa-graduation-cap"></i> Universitet Şansını Hesabla</h2>
 
             <form id="predictionForm">
@@ -55,12 +56,11 @@
                 <div class="form-group">
                     <label for="field">İxtisas İstiqaməti</label>
                     <select id="field" required>
-                        <option value="Computer Science">İnformatika / Kompüter Elmləri</option>
-                        <option value="Engineering">Mühəndislik</option>
-                        <option value="Business">Biznes / İqtisadiyyat</option>
-                        <option value="Medicine">Tibb</option>
-                        <option value="Law">Hüquq</option>
-                    </select>
+                    <option value="computer science">İnformatika / Kompüter Elmləri</option>
+                    <option value="engineering">Mühəndislik</option>
+                    <option value="business">Biznes / Menecment</option>
+                    <option value="medicine">Tibb</option>
+</select>
                 </div>
 
                 <button type="submit" class="predict-btn">Proqnozlaşdır</button>
@@ -77,7 +77,6 @@
         <div class="modal-content">
             <span class="close-modal" id="closeModalBtn">&times;</span>
 
-            <!-- ÇATIŞMAYAN ƏSAS MENYU HİSSƏSİ (Bunu əlavə et) -->
             <div id="modalMenu" class="modal-section">
                 <h3><i class="fa-solid fa-circle-info"></i> Müraciət Menyusu</h3>
                 <p>Zəhmət olmasa etmək istədiyiniz əməliyyatı seçin:</p>
@@ -90,12 +89,10 @@
                 </div>
             </div>
 
-            <!-- Mövcud Qeydiyyat Bölməsi (Olduğu kimi qalır) -->
             <div id="registrationSection" class="modal-section" style="display: none;">
                 <button class="back-btn back-to-menu-btn"><i class="fa-solid fa-arrow-left"></i> Geri</button>
                 <h3><i class="fa-solid fa-calendar-check"></i> Görüş üçün Qeydiyyat</h3>
                 <form id="applyForm">
-                    <!-- ... form elementləri ... -->
                     <div class="form-group-modal">
                         <label>Ad və Soyad</label>
                         <input type="text" id="applyName" placeholder="Məsələn: Əli Əliyev" required>

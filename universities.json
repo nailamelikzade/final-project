@@ -8,7 +8,12 @@
       "ielts_min": 6.5,
       "toefl_min": 87,
       "gpa_min": 3.0,
-      "fields": ["Kompüter Elmləri", "Biznes", "Mühəndislik", "Sosial Elmlər"],
+      "fields": [
+        "Kompüter Elmləri",
+        "Biznes",
+        "Mühəndislik",
+        "Sosial Elmlər"
+      ],
       "tuition_usd_per_year": 800,
       "language": "İngilis/Türk",
       "deadline": "Mart",
@@ -23,7 +28,12 @@
       "ielts_min": 6.5,
       "toefl_min": 87,
       "gpa_min": 3.0,
-      "fields": ["Mühəndislik", "Kompüter Elmləri", "Memarlıq", "Təbiət Elmləri"],
+      "fields": [
+        "Mühəndislik",
+        "Kompüter Elmləri",
+        "Memarlıq",
+        "Təbiət Elmləri"
+      ],
       "tuition_usd_per_year": 700,
       "language": "İngilis",
       "deadline": "Mart",
@@ -38,7 +48,12 @@
       "ielts_min": 7.0,
       "toefl_min": 100,
       "gpa_min": 3.2,
-      "fields": ["Biznes (MBA)", "Hüquq", "Tibb", "Mühəndislik"],
+      "fields": [
+        "Biznes (MBA)",
+        "Hüquq",
+        "Tibb",
+        "Mühəndislik"
+      ],
       "tuition_usd_per_year": 12000,
       "language": "İngilis",
       "deadline": "Fevral",
@@ -53,7 +68,12 @@
       "ielts_min": 6.5,
       "toefl_min": 87,
       "gpa_min": 3.0,
-      "fields": ["Mühəndislik", "Biznes", "Sosial Elmlər", "Süni İntellekt"],
+      "fields": [
+        "Mühəndislik",
+        "Biznes",
+        "Sosial Elmlər",
+        "Süni İntellekt"
+      ],
       "tuition_usd_per_year": 10000,
       "language": "İngilis",
       "deadline": "Mart",
@@ -68,7 +88,12 @@
       "ielts_min": 6.5,
       "toefl_min": 87,
       "gpa_min": 3.0,
-      "fields": ["Kompüter Elmləri", "Biznes", "Mühəndislik", "İncəsənət"],
+      "fields": [
+        "Kompüter Elmləri",
+        "Biznes",
+        "Mühəndislik",
+        "İncəsənət"
+      ],
       "tuition_usd_per_year": 9000,
       "language": "İngilis",
       "deadline": "Mart",
@@ -83,7 +108,12 @@
       "ielts_min": 6.5,
       "toefl_min": 88,
       "gpa_min": 3.0,
-      "fields": ["Mühəndislik", "İnformatika", "Təbiət Elmləri", "Menecment"],
+      "fields": [
+        "Mühəndislik",
+        "İnformatika",
+        "Təbiət Elmləri",
+        "Menecment"
+      ],
       "tuition_usd_per_year": 300,
       "language": "İngilis/Alman",
       "deadline": "Yanvar",
@@ -98,7 +128,12 @@
       "ielts_min": 6.5,
       "toefl_min": 88,
       "gpa_min": 3.0,
-      "fields": ["Tibb", "Biologiya", "Hüquq", "Sosial Elmlər"],
+      "fields": [
+        "Tibb",
+        "Biologiya",
+        "Hüquq",
+        "Sosial Elmlər"
+      ],
       "tuition_usd_per_year": 300,
       "language": "Alman/İngilis",
       "deadline": "Yanvar",
@@ -113,7 +148,12 @@
       "ielts_min": 6.5,
       "toefl_min": 88,
       "gpa_min": 2.8,
-      "fields": ["Tibb", "Hüquq", "İqtisadiyyat", "Humanitar Elmlər"],
+      "fields": [
+        "Tibb",
+        "Hüquq",
+        "İqtisadiyyat",
+        "Humanitar Elmlər"
+      ],
       "tuition_usd_per_year": 300,
       "language": "Alman/İngilis",
       "deadline": "Yanvar",
@@ -128,7 +168,12 @@
       "ielts_min": 6.0,
       "toefl_min": 80,
       "gpa_min": 2.8,
-      "fields": ["Humanitar Elmlər", "Hüquq", "Təbiət Elmləri", "Sosial Elmlər"],
+      "fields": [
+        "Humanitar Elmlər",
+        "Hüquq",
+        "Təbiət Elmləri",
+        "Sosial Elmlər"
+      ],
       "tuition_usd_per_year": 300,
       "language": "Alman/İngilis",
       "deadline": "Mart",
@@ -143,7 +188,12 @@
       "ielts_min": 6.0,
       "toefl_min": 80,
       "gpa_min": 2.8,
-      "fields": ["Siyasi Elmlər", "Tarix", "Hüquq", "İqtisadiyyat"],
+      "fields": [
+        "Siyasi Elmlər",
+        "Tarix",
+        "Hüquq",
+        "İqtisadiyyat"
+      ],
       "tuition_usd_per_year": 300,
       "language": "Alman/İngilis",
       "deadline": "Mart",
@@ -158,7 +208,12 @@
       "ielts_min": 6.5,
       "toefl_min": 90,
       "gpa_min": 3.0,
-      "fields": ["Mühəndislik", "Memarlıq", "Aeronavtika", "İnformatika"],
+      "fields": [
+        "Mühəndislik",
+        "Memarlıq",
+        "Aeronavtika",
+        "İnformatika"
+      ],
       "tuition_usd_per_year": 18000,
       "language": "İngilis",
       "deadline": "Yanvar",
@@ -173,7 +228,12 @@
       "ielts_min": 6.5,
       "toefl_min": 92,
       "gpa_min": 3.0,
-      "fields": ["Biznes", "Hüquq", "Sosial Elmlər", "İnformatika"],
+      "fields": [
+        "Biznes",
+        "Hüquq",
+        "Sosial Elmlər",
+        "İnformatika"
+      ],
       "tuition_usd_per_year": 16000,
       "language": "İngilis",
       "deadline": "Yanvar",
@@ -188,7 +248,12 @@
       "ielts_min": 6.5,
       "toefl_min": 90,
       "gpa_min": 3.0,
-      "fields": ["Mühəndislik", "Elektrotexnika", "İnformatika", "Dizayn"],
+      "fields": [
+        "Mühəndislik",
+        "Elektrotexnika",
+        "İnformatika",
+        "Dizayn"
+      ],
       "tuition_usd_per_year": 17000,
       "language": "İngilis",
       "deadline": "Yanvar",
@@ -203,7 +268,12 @@
       "ielts_min": 6.5,
       "toefl_min": 88,
       "gpa_min": 3.0,
-      "fields": ["Tibb", "Mühəndislik", "Hüquq", "İqtisadiyyat"],
+      "fields": [
+        "Tibb",
+        "Mühəndislik",
+        "Hüquq",
+        "İqtisadiyyat"
+      ],
       "tuition_usd_per_year": 5000,
       "language": "İngilis/Holland",
       "deadline": "Mart",
@@ -218,7 +288,12 @@
       "ielts_min": 6.5,
       "toefl_min": 90,
       "gpa_min": 3.0,
-      "fields": ["Tibb", "Hüquq", "Sosial Elmlər", "Təbiət Elmləri"],
+      "fields": [
+        "Tibb",
+        "Hüquq",
+        "Sosial Elmlər",
+        "Təbiət Elmləri"
+      ],
       "tuition_usd_per_year": 13000,
       "language": "İngilis",
       "deadline": "Yanvar",
@@ -233,7 +308,12 @@
       "ielts_min": 6.5,
       "toefl_min": 90,
       "gpa_min": 3.0,
-      "fields": ["Mühəndislik", "İnformatika", "Texnologiya", "Arxitektura"],
+      "fields": [
+        "Mühəndislik",
+        "İnformatika",
+        "Texnologiya",
+        "Arxitektura"
+      ],
       "tuition_usd_per_year": 14000,
       "language": "İngilis",
       "deadline": "Yanvar",
@@ -248,7 +328,12 @@
       "ielts_min": 7.0,
       "toefl_min": 100,
       "gpa_min": 3.5,
-      "fields": ["Mühəndislik", "Kompüter Elmləri", "Fizika", "Riyaziyyat"],
+      "fields": [
+        "Mühəndislik",
+        "Kompüter Elmləri",
+        "Fizika",
+        "Riyaziyyat"
+      ],
       "tuition_usd_per_year": 1500,
       "language": "İngilis/Alman",
       "deadline": "Dekabr",
@@ -263,7 +348,12 @@
       "ielts_min": 6.0,
       "toefl_min": 80,
       "gpa_min": 2.8,
-      "fields": ["İqtisadiyyat", "Hüquq", "İnformatika", "Sosial Elmlər"],
+      "fields": [
+        "İqtisadiyyat",
+        "Hüquq",
+        "İnformatika",
+        "Sosial Elmlər"
+      ],
       "tuition_usd_per_year": 3000,
       "language": "İngilis/Polyak",
       "deadline": "May",
@@ -278,7 +368,12 @@
       "ielts_min": 6.0,
       "toefl_min": 80,
       "gpa_min": 2.8,
-      "fields": ["Mühəndislik", "Arxitektura", "İnformatika", "Nəqliyyat"],
+      "fields": [
+        "Mühəndislik",
+        "Arxitektura",
+        "İnformatika",
+        "Nəqliyyat"
+      ],
       "tuition_usd_per_year": 2000,
       "language": "İngilis",
       "deadline": "Aprel",
@@ -293,12 +388,177 @@
       "ielts_min": 5.5,
       "toefl_min": 72,
       "gpa_min": 2.5,
-      "fields": ["Hüquq", "İqtisadiyyat", "Beynəlxalq Münasibətlər", "Humanitar Elmlər"],
+      "fields": [
+        "Hüquq",
+        "İqtisadiyyat",
+        "Beynəlxalq Münasibətlər",
+        "Humanitar Elmlər"
+      ],
       "tuition_usd_per_year": 2500,
       "language": "İngilis/Gürcü",
       "deadline": "İyun",
       "scholarship_available": false,
       "website": "https://www.tsu.ge"
+    },
+    {
+      "id": 21,
+      "name": "Boloniya Universiteti",
+      "country": "İtaliya",
+      "city": "Boloniya",
+      "ielts_min": 6.0,
+      "toefl_min": 80,
+      "gpa_min": 2.7,
+      "fields": [
+        "Kompüter Elmləri",
+        "İqtisadiyyat",
+        "Beynəlxalq Münasibətlər",
+        "Humanitar Elmlər"
+      ],
+      "tuition_usd_per_year": 1200,
+      "language": "İngilis/İtalyan",
+      "deadline": "Aprel",
+      "scholarship_available": true,
+      "website": "https://www.unibo.it"
+    },
+    {
+      "id": 22,
+      "name": "Milano Politexnik Universiteti",
+      "country": "İtaliya",
+      "city": "Milan",
+      "ielts_min": 6.0,
+      "toefl_min": 78,
+      "gpa_min": 2.8,
+      "fields": [
+        "Mühəndislik",
+        "Arxitektura",
+        "Dizayn",
+        "Süni İntellekt"
+      ],
+      "tuition_usd_per_year": 1500,
+      "language": "İngilis",
+      "deadline": "Fevral",
+      "scholarship_available": true,
+      "website": "https://www.polimi.it"
+    },
+    {
+      "id": 23,
+      "name": "Sapienza Roma Universiteti",
+      "country": "İtaliya",
+      "city": "Roma",
+      "ielts_min": 6.0,
+      "toefl_min": 80,
+      "gpa_min": 2.6,
+      "fields": [
+        "Klassik Elmlər",
+        "Fizika",
+        "Kompüter Elmləri",
+        "Tibb"
+      ],
+      "tuition_usd_per_year": 1000,
+      "language": "İngilis/İtalyan",
+      "deadline": "May",
+      "scholarship_available": true,
+      "website": "https://www.uniroma1.it"
+    },
+    {
+      "id": 24,
+      "name": "Vyan Dövlət Universiteti",
+      "country": "Avstriya",
+      "city": "Vyana",
+      "ielts_min": 6.5,
+      "toefl_min": 87,
+      "gpa_min": 2.8,
+      "fields": [
+        "İqtisadiyyat",
+        "İnformatika",
+        "Psixologiya",
+        "Xarici Dillər"
+      ],
+      "tuition_usd_per_year": 1600,
+      "language": "Alman/İngilis",
+      "deadline": "Aprel",
+      "scholarship_available": false,
+      "website": "https://www.univie.ac.at"
+    },
+    {
+      "id": 25,
+      "name": "Tokyo Universiteti",
+      "country": "Yaponiya",
+      "city": "Tokyo",
+      "ielts_min": 7.0,
+      "toefl_min": 100,
+      "gpa_min": 3.4,
+      "fields": [
+        "Fizika",
+        "Mühəndislik",
+        "İnformatika",
+        "İqtisadiyyat"
+      ],
+      "tuition_usd_per_year": 5000,
+      "language": "Yapon/İngilis",
+      "deadline": "Dekabr",
+      "scholarship_available": true,
+      "website": "https://www.u-tokyo.ac.jp"
+    },
+    {
+      "id": 26,
+      "name": "Seoul Milli Universiteti",
+      "country": "Cənubi Koreya",
+      "city": "Seoul",
+      "ielts_min": 6.5,
+      "toefl_min": 85,
+      "gpa_min": 3.2,
+      "fields": [
+        "Kompüter Elmləri",
+        "Mühəndislik",
+        "Biznes",
+        "Kimya"
+      ],
+      "tuition_usd_per_year": 6000,
+      "language": "Koreya/İngilis",
+      "deadline": "Mart",
+      "scholarship_available": true,
+      "website": "https://www.snu.ac.kr"
+    },
+    {
+      "id": 27,
+      "name": "Budapeşt Texnologiya və İqtisadiyyat Universiteti",
+      "country": "Macarıstan",
+      "city": "Budapeşt",
+      "ielts_min": 6.0,
+      "toefl_min": 80,
+      "gpa_min": 2.7,
+      "fields": [
+        "Mühəndislik",
+        "İnformatika",
+        "Riyaziyyat",
+        "İqtisadiyyat"
+      ],
+      "tuition_usd_per_year": 3500,
+      "language": "İngilis",
+      "deadline": "Aprel",
+      "scholarship_available": true,
+      "website": "https://www.bme.hu"
+    },
+    {
+      "id": 28,
+      "name": "Tallin Texnoloji Universiteti (TalTech)",
+      "country": "Estoniya",
+      "city": "Tallin",
+      "ielts_min": 6.0,
+      "toefl_min": 72,
+      "gpa_min": 2.8,
+      "fields": [
+        "Kiber-təhlükəsizlik",
+        "İnformatika",
+        "Biznes",
+        "Robototexnika"
+      ],
+      "tuition_usd_per_year": 4000,
+      "language": "İngilis",
+      "deadline": "May",
+      "scholarship_available": true,
+      "website": "https://taltech.ee"
     }
   ]
 }

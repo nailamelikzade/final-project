@@ -1,17 +1,20 @@
 const API_URL = "http://127.0.0.1:8000/api/universities";
 let universities = [];
 
+// Səhifə yüklənəndə API-dan dataları çəkirik
 document.addEventListener("DOMContentLoaded", async () => {
     await fetchUniversities();
     setupEventListeners();
 });
 
+// Serverdən məlumatları gətirən funksiya
 async function fetchUniversities() {
     try {
         const response = await fetch(API_URL);
         if (!response.ok) throw new Error("Server cavab vermədi");
         const data = await response.json();
 
+        // API-dan gələn datanın strukturunu yoxlayırıq və massivi tapırıq
         if (Array.isArray(data)) {
             universities = data;
         } else if (data.universities && Array.isArray(data.universities)) {
@@ -22,6 +25,7 @@ async function fetchUniversities() {
         }
     } catch (error) {
         console.error("API işləmir, mock data yüklənir:", error);
+        // API-da problem olarsa layihənin çökməməsi üçün ehtiyat (mock) data
         universities = [
             {
                 name: "Technical University of Munich",
@@ -72,6 +76,7 @@ async function fetchUniversities() {
     }
 }
 
+// Event Listener-ləri quraşdıran funksiya
 function setupEventListeners() {
     const predictionForm = document.getElementById("predictionForm");
     if (predictionForm) {
@@ -86,30 +91,64 @@ function setupEventListeners() {
     }
 }
 
+// Proqnozlaşdırma düyməsi sıxılanda işləyən əsas məntiq
 function handlePrediction(event) {
     event.preventDefault();
+    console.log("Filtrlənən Universitetlər:", universities); 
 
-    const userGpa    = parseFloat(document.getElementById('gpa').value);
-    const userIelts  = parseFloat(document.getElementById('ielts').value);
-    const maxBudget  = parseFloat(document.getElementById('budget').value);
+    // İstifadəçinin formda daxil etdiyi dəyərlər
+    const userGpa = parseFloat(document.getElementById('gpa').value);
+    const userIelts = parseFloat(document.getElementById('ielts').value);
+    const maxBudget = parseFloat(document.getElementById('budget').value);
     const selectedField = document.getElementById('field').value;
 
-    const resultsGrid    = document.getElementById('resultsGrid');
+    const resultsGrid = document.getElementById('resultsGrid');
     const resultsSection = document.getElementById('resultsSection');
 
+    // Filtrləmə prosesi
     const filteredUnis = universities.filter(uni => {
-        const gpaCheck    = userGpa   >= uni.gpa_min;
-        const ieltsCheck  = userIelts >= uni.ielts_min;
-        const budgetCheck = uni.tuition_usd_per_year <= maxBudget;
-        const fieldCheck  = uni.fields.some(f =>
-            f.toLowerCase().includes(selectedField.toLowerCase()) ||
-            selectedField.toLowerCase().includes(f.toLowerCase())
-        );
+        // API-dən gələn fərqli açar sözləri və string-rəqəm tiplərini sığortalayırıq
+        const uniGpa = parseFloat(uni.gpa_min || uni.gpa || 0);
+        const uniIelts = parseFloat(uni.ielts_min || uni.ielts || 0);
+        const uniTuition = parseFloat(uni.tuition_usd_per_year !== undefined ? uni.tuition_usd_per_year : (uni.tuition || 0));
+
+        // Şərtlərin yoxlanılması
+        const gpaCheck = userGpa >= uniGpa;
+        const ieltsCheck = userIelts >= uniIelts;
+        const budgetCheck = uniTuition <= maxBudget;
+
+        // Əgər obyektdə fields sahəsi yoxdursa, xəta verməməsi üçün boş massiv təyin edirik
+        const uniFields = uni.fields || [];
+        
+        // İxtisas uyğunluğunun hərfi-hərfə yoxlanılması (Böyük-kiçik və "İ" hərfi problemi həlli)
+        const fieldCheck = uniFields.some(f => {
+    const uniField = f.toLowerCase()
+        .replace(/ı/g, 'i').replace(/İ/g, 'i')
+        .replace(/ə/g, 'e').replace(/ş/g, 's')
+        .replace(/ğ/g, 'g').replace(/ü/g, 'u')
+        .replace(/ö/g, 'o').replace(/ç/g, 'c');
+    
+    const userField = selectedField.toLowerCase();
+
+    const mapping = {
+        'computer science': ['komputer', 'informatika', 'bilisim', 'computer', 'it'],
+        'engineering':      ['muhendislik', 'texniki', 'engineering', 'politexnik'],
+        'business':         ['biznes', 'menecment', 'iqtisadiyyat', 'mba', 'business'],
+        'medicine':         ['tibb', 'medicine', 'biologiya', 'saglamliq']
+    };
+
+    const keywords = mapping[userField] || [userField];
+    return keywords.some(kw => uniField.includes(kw));
+});
+
+        // Bütün şərtlər ödənməlidir
         return gpaCheck && ieltsCheck && budgetCheck && fieldCheck;
     });
 
+    // Əvvəlki nəticələri təmizləyirik
     resultsGrid.innerHTML = '';
 
+    // Ekrana çıxarma (Render) məntiqi
     if (filteredUnis.length === 0) {
         resultsGrid.innerHTML = `
             <p class="no-results">
@@ -118,26 +157,34 @@ function handlePrediction(event) {
             </p>`;
     } else {
         filteredUnis.forEach(uni => {
+            // Datanın daxilindəki alternativ və ya boş qala biləcək sahələri nizamlayırıq
+            const tuition = uni.tuition_usd_per_year !== undefined ? uni.tuition_usd_per_year : (uni.tuition || 0);
+            const language = uni.language || "İngilis";
+            const deadline = uni.deadline || "Məlum deyil";
+            const website = uni.website || "#";
+            const isScholarship = uni.scholarship_available || uni.scholarship || false;
+
             const card = document.createElement('div');
             card.className = 'uni-card';
             card.innerHTML = `
                 <div class="uni-info">
                     <h3>${uni.name}</h3>
-                    <p><i class="fa-solid fa-location-dot"></i> ${uni.city}, ${uni.country} &nbsp;|&nbsp; <i class="fa-solid fa-wallet"></i> $${uni.tuition_usd_per_year}/il</p>
-                    <p style="margin-top:5px"><i class="fa-solid fa-language"></i> Dil: ${uni.language} (IELTS min: ${uni.ielts_min}) | GPA min: ${uni.gpa_min}</p>
-                    <p style="margin-top:5px"><i class="fa-solid fa-calendar-days"></i> Son Tarix: ${uni.deadline}</p>
-                    <a href="${uni.website}" target="_blank" class="uni-link">
+                    <p><i class="fa-solid fa-location-dot"></i> ${uni.city || ''}, ${uni.country || ''} &nbsp;|&nbsp; <i class="fa-solid fa-wallet"></i> $${tuition}/il</p>
+                    <p style="margin-top:5px"><i class="fa-solid fa-language"></i> Dil: ${language} (IELTS min: ${uni.ielts_min || uni.ielts}) | GPA min: ${uni.gpa_min || uni.gpa}</p>
+                    <p style="margin-top:5px"><i class="fa-solid fa-calendar-days"></i> Son Tarix: ${deadline}</p>
+                    <a href="${website}" target="_blank" class="uni-link">
                         Vebsayta keçid <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
                 <div>
-                    <span class="uni-badge">${uni.scholarship_available ? 'Təqaüd Var' : 'Təqaüdsüz'}</span>
+                    <span class="uni-badge">${isScholarship ? 'Təqaüd Var' : 'Təqaüdsüz'}</span>
                 </div>
             `;
             resultsGrid.appendChild(card);
         });
     }
 
+    // Nəticələr hissəsini görünən edirik və səhifəni ora sürüşdürürük
     resultsSection.style.display = 'block';
     resultsSection.scrollIntoView({ behavior: 'smooth' });
 }
