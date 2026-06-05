@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/api/universities";
+const API_URL = "https://final-project-e6ga.onrender.com/api/universities";
 let universities = [];
 
 // Səhifə yüklənəndə API-dan dataları çəkirik
