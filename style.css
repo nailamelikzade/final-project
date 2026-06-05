@@ -565,10 +565,232 @@ main {
     transform: translateY(-2px);
 }
 
+
+@media (min-width: 1400px) {
+    main {
+        max-width: 1400px;
+    }
+    .welcome-text {
+        font-size: 62px;
+    }
+}
+
+@media (max-width: 1280px) {
+    header {
+        padding: 0 4%;
+    }
+    header nav ul {
+        gap: 25px;
+    }
+    .welcome {
+        padding: 50px 40px;
+    }
+    .welcome-text {
+        font-size: 46px;
+    }
+}
+@media (max-width: 1024px) {
+    header nav ul {
+        gap: 18px;
+    }
+    header a {
+        font-size: 14px;
+    }
+    .welcome {
+        padding: 45px 35px;
+        gap: 30px;
+    }
+    .welcome-text {
+        font-size: 40px;
+    }
+    .welcome-images {
+        height: 270px;
+    }
+    .why-we > div:first-child {
+        grid-column: span 1;
+    }
+    .why-we {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}
+
 @media (max-width: 768px) {
+    header {
+        padding: 0 5%;
+        height: 70px;
+    }
+    .logo {
+        height: 130px;
+    }
+    #profile {
+        margin-left: auto;
+    }
+    .welcome {
+        flex-direction: column;
+        padding: 40px 30px;
+        gap: 30px;
+        text-align: center;
+        align-items: center;
+    }
+    .welcome-text {
+        width: 100%;
+        font-size: 36px;
+    }
+    .welcome-images {
+        width: 100%;
+        height: 240px;
+    }
+    .travel-photo {
+        width: 60%;
+    }
+    .grad-photo {
+        width: 45%;
+    }
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    .services h2 {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+    .services .first,
+    .services > div:nth-child(3),
+    .services > div:nth-child(4),
+    .services > div:nth-child(5),
+    .services > div:last-child > div {
+        padding: 25px 18px;
+        min-height: 180px;
+        font-size: 16px;
+    }
+    .why-we {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 50px;
+    }
+    .why-we > div:first-child {
+        grid-column: span 1;
+    }
+    .why-we h2 {
+        font-size: 22px;
+    }
+    .why-we > div:nth-child(2) h2 {
+        font-size: 34px;
+    }
+    .why-we-title,
+    .services h2 {
+        font-size: 28px;
+    }
     .main-footer {
         flex-direction: column;
+        align-items: center;
         text-align: center;
         padding: 20px;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 0 5%;
+        height: 65px;
+    }
+    .logo {
+        height: 110px;
+    }
+    main {
+        margin: 24px auto;
+        padding: 0 16px;
+    }
+    .welcome {
+        padding: 30px 20px;
+        border-radius: 20px;
+        margin-bottom: 50px;
+    }
+    .welcome-text {
+        font-size: 28px;
+        letter-spacing: -0.5px;
+    }
+    .welcome-images {
+        height: 200px;
+    }
+    .travel-photo {
+        width: 62%;
+    }
+    .grad-photo {
+        width: 55%;
+    }
+    .services {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .services h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .services .first,
+    .services > div:nth-child(3),
+    .services > div:nth-child(4),
+    .services > div:nth-child(5),
+    .services > div:last-child > div {
+        padding: 22px 18px;
+        min-height: 140px;
+        font-size: 15px;
+        border-radius: 18px;
+    }
+    .forecast-img, .apply-img, .letter-img, .conversation-img {
+        width: 46px;
+        height: 46px;
+    }
+    .why-we {
+        gap: 16px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .why-we > div {
+        padding: 28px 22px;
+        border-radius: 20px;
+    }
+    .why-we h2 {
+        font-size: 20px;
+    }
+    .why-we > div:first-child h2 {
+        font-size: 22px;
+    }
+    .why-we > div:nth-child(2) h2 {
+        font-size: 30px;
+    }
+    .why-we p {
+        font-size: 14px;
+    }
+    .why-we-title,
+    .services h2 {
+        font-size: 24px;
+        margin-top: 50px;
+        margin-bottom: 24px;
+    }
+    .countries {
+        display: none;
+    }
+    .nav-main{
+        display: none;
+    }
+    .nav-servicess{
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .welcome-text {
+        font-size: 24px;
+    }
+    .welcome-images {
+        height: 170px;
+    }
+    .why-we > div {
+        padding: 22px 18px;
+    }
+    .nav-main{
+        display: none;
     }
 }
