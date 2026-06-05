@@ -1,4 +1,6 @@
 import json
+import os
+import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -20,3 +22,8 @@ def get_universities():
             return data  
     except Exception as e:
         return {"error": str(e), "universities": []}
+
+if __name__ == "__main__":
+    # Render-in verdiyi portu götürür, yoxdursa 10000 istifadə edir
+    port = int(os.environ.get("PORT", 10000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
