@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // 1. Menyu bloku gizlədilir, birbaşa qeydiyyat bölməsi açılır
         const modalMenu = document.getElementById("modalMenu");
         const regSection = document.getElementById("registrationSection");
-        
+
         if (modalMenu) modalMenu.style.display = "none";
         if (regSection) regSection.style.display = "block";
 
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (regTitle) regTitle.innerText = "Konsultasiya üçün Qeydiyyat";
         if (submitBtn) submitBtn.innerText = "Konsultasiya Görüşünü Təsdiqlə";
-        
+
         // 3. Konsultasiya zamanı "Geri qayıt" düyməsi menyuya yox, birbaşa index.html-ə getsin
         document.querySelectorAll(".back-to-menu-btn").forEach(btn => {
             // Mövcud funksiyanı silmək üçün yeni bir klik hadisəsi əlavə edirik
@@ -60,14 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             const name = document.getElementById("applyName").value;
             const time = document.getElementById("applyTime").value;
-            
+
             // Bildiriş mesajını da gəldiyi yerə görə fərdiləşdiririk
             if (urlParams.get('type') === 'consultation') {
                 alert(`Hörmətli ${name}, konsultasiya müraciətiniz qəbul olundu. Saat ${time} üçün görüş təyin edildi!`);
             } else {
                 alert(`Hörmətli ${name}, universitet müraciətiniz qəbul olundu. Saat ${time} üçün görüş təyin edildi!`);
             }
-            
+
             window.location.href = "./index.html";
         });
     }
@@ -79,7 +79,7 @@ function showSection(type) {
     const infoSection = document.getElementById("infoSection");
 
     if (modalMenu) modalMenu.style.display = "none";
-    
+
     if (type === 'registration' && regSection) {
         regSection.style.display = "block";
     } else if (infoSection) {

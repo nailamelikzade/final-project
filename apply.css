@@ -262,7 +262,6 @@ h2 {
         font-size: 14px;
     }
 }
-
 @media (max-width: 375px) {
     .container {
         padding: 20px 12px;
