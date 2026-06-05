@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitetə Müraciət və Qeydiyyat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./apply.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="close-btn" id="closePageBtn">&times;</div>
+        <div id="modalMenu" class="menu-selection">
+            <h2>Universitetə Müraciət</h2>
+            <div class="menu-card" id="openRegistrationBtn">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <div>
+                    <h3>Müraciət üçün Qeydiyyat</h3>
+                    <p>Məsləhətçi görüşü üçün vaxt təyin edin</p>
+                </div>
+            </div>
+
+            <div class="menu-card" id="openInfoBtn">
+                <i class="fa-solid fa-circle-info"></i>
+                <div>
+                    <h3>Müraciət Haqqında Məlumat</h3>
+                    <p>Tələb olunan sənədlər və qaydalar</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="registrationSection" class="section">
+            <button class="back-btn back-to-menu-btn"><i class="fa-solid fa-arrow-left"></i> Geri qayıt</button>
+            <h2>Görüş Qeydiyyatı</h2>
+            <form id="applyForm">
+                <div class="form-group">
+                    <label for="applyName">Adınız və Soyadınız</label>
+                    <input type="text" id="applyName" placeholder="Məsələn: Əli Məmmədov" required>
+                </div>
+                <div class="form-group">
+                    <label for="applyName">Telefon</label>
+                    <input type="tel" id="applyTel" placeholder="+994-------" required>
+                </div>
+                <div class="form-group">
+                    <label for="applyTime">Uyğun Görüş Saatı</label>
+                    <div class="select-wrapper">
+                        <select id="applyTime" required>
+                            <option value="" disabled selected>Saat seçin...</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Qeydiyyatı Tamamla</button>
+            </form>
+        </div>
+
+        <div id="infoSection" class="section">
+            <button class="back-btn back-to-menu-btn"><i class="fa-solid fa-arrow-left"></i> Geri qayıt</button>
+            <h2>Müraciət Qaydaları</h2>
+            <div class="info-list">
+                <div class="info-item">
+                    Xaricdə təhsil müraciətləri üçün rəsmi transkript (Qiymət cədvəli) mütləqdir.
+                </div>
+                <div class="info-item">
+                    IELTS və ya digər beynəlxalq dil sertifikatlarının vaxtının bitmədiyindən əmin olun.
+                </div>
+                <div class="info-item">
+                    Qeydiyyatdan keçdikdən sonra mütəxəssislərimiz 24 saat ərzində sizinlə əlaqə saxlayacaq.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./apply.js"></script>
+</body>
+</body>
+
+</html>

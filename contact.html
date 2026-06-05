@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bizimlə Əlaqə - EduPath</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./contact.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="close-btn" id="closePageBtn">&times;</div>
+
+        <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> Geri qayıt</button>
+        
+        <div class="contact-grid">
+            
+            <div class="contact-info">
+                <span class="sub-title">Bizimlə Əlaqə</span>
+                <h2>Sualınız var? Bizə yazın!</h2>
+                <p class="contact-desc">
+                    Xaricdə təhsil, universitet qəbulları və təqaüdlərlə bağlı ağlınıza takılan hər şeyi soruşa bilərsiniz. Komandamız ən qısa zamanda sizə geri dönüş edəcək.
+                </p>
+
+                <div class="info-details">
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h3>Ünvanımız</h3>
+                            <p>Sumqayıt, Azərbaycan</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h3>E-poçt</h3>
+                            <p>info@edupath.az</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-box">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Ad və Soyad</label>
+                        <input type="text" id="name" placeholder="Nümunə: Əli Məmmədov" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-poçt Ünvanı</label>
+                        <input type="email" id="email" placeholder="ali@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Mövzu</label>
+                        <input type="text" id="subject" placeholder="Nümunə: İtaliyada Təhsil haqqında" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mesajınız</label>
+                        <textarea id="message" rows="4" placeholder="Suallarınızı buraya qeyd edin..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Mesajı Göndər <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const backToHome = () => {
+            window.location.href = "index.html"; 
+        };
+
+        document.getElementById("closePageBtn").addEventListener("click", backToHome);
+        document.getElementById("backBtn").addEventListener("click", backToHome);
+
+        
+        document.getElementById("contactForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("Təbriklər! Mesajınız uğurla göndərildi. Ən qısa zamanda sizinlə əlaqə saxlayacağıq.");
+            document.getElementById("contactForm").reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPath - Universitet Proqnozlaşdırılması</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="./prediction.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="companyName">
+            <img class="logo" id="headerLogo" src="./images/logo.png" alt="Logo" style="cursor:pointer;">
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Ana səhifə</a></li>
+                    <li><a href="#">Xidmətlər</a></li>
+                    <li><a href="#">Haqqımızda</a></li>
+                    <li><a href="#">Əlaqə</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="profile">
+            <i class="fa-regular fa-circle-user"></i>
+        </div>
+    </header>
+
+    <main>
+        <div class="predict-container">
+            <h2 class="predict-title"><i class="fa-solid fa-graduation-cap"></i> Universitet Şansını Hesabla</h2>
+
+            <form id="predictionForm">
+                <div class="form-group">
+                    <label for="gpa">GPA (Orta Bal - 4.0 üzərindən)</label>
+                    <input type="number" id="gpa" step="0.1" min="0" max="4.0" placeholder="Məsələn: 3.2" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ielts">IELTS Balı</label>
+                    <input type="number" id="ielts" step="0.5" min="0" max="9.0" placeholder="Məsələn: 6.5" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Maksimum İllik Büdcə (USD)</label>
+                    <input type="number" id="budget" placeholder="Məsələn: 5000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="field">İxtisas İstiqaməti</label>
+                    <select id="field" required>
+                        <option value="Computer Science">İnformatika / Kompüter Elmləri</option>
+                        <option value="Engineering">Mühəndislik</option>
+                        <option value="Business">Biznes / İqtisadiyyat</option>
+                        <option value="Medicine">Tibb</option>
+                        <option value="Law">Hüquq</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="predict-btn">Proqnozlaşdır</button>
+            </form>
+
+            <section class="results-section" id="resultsSection">
+                <h2 class="why-we-title">Sizin üçün Uyğun Universitetlər</h2>
+                <div class="results-grid" id="resultsGrid"></div>
+            </section>
+        </div>
+    </main>
+
+    <div id="applyModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModalBtn">&times;</span>
+
+            <!-- ÇATIŞMAYAN ƏSAS MENYU HİSSƏSİ (Bunu əlavə et) -->
+            <div id="modalMenu" class="modal-section">
+                <h3><i class="fa-solid fa-circle-info"></i> Müraciət Menyusu</h3>
+                <p>Zəhmət olmasa etmək istədiyiniz əməliyyatı seçin:</p>
+                <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+                    <button id="openRegistrationBtn" class="predict-btn" style="margin: 0;"><i
+                            class="fa-solid fa-calendar-check"></i> Görüş üçün Qeydiyyat</button>
+                    <button id="openInfoBtn" class="predict-btn"
+                        style="background: linear-gradient(135deg, #64748b, #94a3b8); margin: 0;"><i
+                            class="fa-solid fa-lightbulb"></i> Müraciət Qaydaları</button>
+                </div>
+            </div>
+
+            <!-- Mövcud Qeydiyyat Bölməsi (Olduğu kimi qalır) -->
+            <div id="registrationSection" class="modal-section" style="display: none;">
+                <button class="back-btn back-to-menu-btn"><i class="fa-solid fa-arrow-left"></i> Geri</button>
+                <h3><i class="fa-solid fa-calendar-check"></i> Görüş üçün Qeydiyyat</h3>
+                <form id="applyForm">
+                    <!-- ... form elementləri ... -->
+                    <div class="form-group-modal">
+                        <label>Ad və Soyad</label>
+                        <input type="text" id="applyName" placeholder="Məsələn: Əli Əliyev" required>
+                    </div>
+                    <div class="form-group-modal">
+                        <label>Telefon Nömrəsi</label>
+                        <input type="tel" id="applyPhone" placeholder="Məsələn: +994 50 123 45 67" required>
+                    </div>
+                    <div class="form-group-modal">
+                        <label>Görüş üçün Vaxt Seçin</label>
+                        <select id="applyTime" required>
+                            <option value="">Saat seçin...</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00" disabled style="color: #ef4444;">11:00 (Dolu)</option>
+                            <option value="12:00">12:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00" disabled style="color: #ef4444;">15:00 (Dolu)</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-modal-btn">Qeydiyyatı Tamamla</button>
+                </form>
+            </div>
+
+
+            <div id="infoSection" class="modal-section" style="display: none;">
+                <button class="back-btn back-to-menu-btn"><i class="fa-solid fa-arrow-left"></i> Geri</button>
+                <h3><i class="fa-solid fa-lightbulb"></i> Müraciət Zamanı Nələrə Diqqət Edilməli?</h3>
+                <div class="info-text-content">
+                    <p><strong>1. Sənədlərin Tamlığı və Düzgünlüyü:</strong> Pasportunuzun qüvvədə olma müddəti,
+                        transkript (GPA) və attestatınızın ingilis dilinə rəsmi tərcümə və notarial təsdiqi mütləqdir.
+                    </p>
+                    <p><strong>2. Dil Sertifikatı və Son Tarixlər (Deadlines):</strong> Hər bir universitetin
+                        özünəməxsus minimum IELTS/TOEFL tələbi var. Müraciət tarixlərini qaçırmamaq üçün vaxtları
+                        öncədən təqviminizdə qeyd edin.</p>
+                    <p><strong>3. Motivasiya Məktubu (SOP):</strong> Universitetə niyə məhz sizi seçməli olduqlarını
+                        izah edən unikal, köçürülməmiş (plagiat olmayan) motivasiya məktubu hazırlayın.</p>
+                    <p><strong>4. Maliyyə və Təqaüd Şərtləri:</strong> Universitetin illik ödənişini və mövcud təqaüd
+                        proqramlarının şərtlərini dərindən araşdırın.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./prediction.js"></script>
+</body>
+
+</html>

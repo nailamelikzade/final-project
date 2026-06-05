@@ -18,35 +18,39 @@
             <nav>
                 <ul>
                     <li><a href="#">Ana səhifə</a></li>
-                    <li><a href="#">Ölkələr</a></li>
-                    <li><a href="#">Xidmətlər</a></li>
-                    <li><a href="#">Haqqımızda</a></li>
-                    <li><a href="#">Əlaqə</a></li>
+                    <li><a href="#">Ölkələr</a>
+                        <div class="countries">
+                            <ul>
+                                <li class="country-list america"><a href="#">Amerika</a></li>
+                                <li class="europe country-list"><a href="#">Avropa</a>
+                                    <ul class="europe-countries">
+                                        <li id="uk"><a href="#">Böyük Britaniya</a></li>
+                                        <li id="italia"><a href="#">Italiya</a></li>
+                                        <li id="germany"><a href="#">Almaniya</a></li>
+                                        <li id="france"><a href="#">Fransa</a></li>
+                                        <li id="sweden"><a href="#">İsveç</a></li>
+                                        <li id="switzerland"><a href="#">İsveçrə</a></li>
+                                        <li id="norway"><a href="#">Norveç</a></li>
+                                        <li id="poland"><a href="#">Polşa</a></li>
+                                    </ul>
+                                </li>
+                                <li class="country-list asia"><a href="#">Asiya</a>
+                                    <ul class="asia">
+                                        <li id="south-korea"><a href="#">Cənubi Koreya</a></li>
+                                        <li id="japan"><a href="#">Yaponiya</a></li>
+                                        <li id="china"><a href="#">Çin</a></li>
+                                        <li id="singapur"><a href="#">Sinqapur</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#services-section">Xidmətlər</a></li>
+                    <li id="about"><a href="#">Haqqımızda</a></li>
+                    <li id="contact"><a href="#">Əlaqə</a></li>
                 </ul>
             </nav>
-            <div class="countries">
-                <ul>
-                    <li><a href="#">Amerika</a></li>
-                    <li><a href="#">Avropa</a></li>
-                    <ul>
-                        <li><a href="#">Böyük Britaniya</a></li>
-                        <li><a href="#">Italiya</a></li>
-                        <li><a href="#">Almaniya</a></li>
-                        <li><a href="#">Fransa</a></li>
-                        <li><a href="#">İsveç</a></li>
-                        <li><a href="#">İsveçrə</a></li>
-                        <li><a href="#">Norveç</a></li>
-                        <li><a href="#">Polşa</a></li>
-                    </ul>
-                    <li><a href="#">Asiya</a></li>
-                    <ul>
-                        <li><a href="#">Cənubi Koreya</a></li>
-                        <li><a href="#">Yaponiya</a></li>
-                        <li><a href="#">Çin</a></li>
-                        <li><a href="#">Sinqapur</a></li>
-                    </ul>
-                </ul>
-            </div>
+
         </div>
         <div id="profile">
             <i class="fa-regular fa-circle-user"></i>
@@ -59,35 +63,38 @@
     <main>
         <section class="welcome">
             <p class="welcome-text">EduPath- a xoş gəlmisiniz!</p>
-            <!-- <img src="./images/background-path.avif" alt=""> -->
             <div class="welcome-images">
                 <img class="travel-photo" src="./images/backround-earth-plain.jpg" alt="">
                 <img class="grad-photo" src="./images/back-plain-mezun.webp" alt="">
             </div>
         </section>
 
-        <section class="services" >
-           <h2>Xidmətlərimiz</h2>
+        <section class="services" id="services-section">
+            <h2>Xidmətlərimiz</h2>
 
-           <div class="first"><img src="./images/forecast.png" alt="Forecast" class="forecast-img ">
-            Universitet proqnozlaşdırması</div>
-           <div>
-            <img src="./images/apply.png" alt="Apply" class="apply-img">
-            Universitetə müraciət</div>
-           <div>
-            <img src="./images/letter.png" alt="Letter" class="letter-img">
-            Motivasiya məktubu</div>
-           <div>
-            <img src="./images/conversation.png" alt="Conversation" class="conversation-img">
-            Konsultasiya</div> 
+            <div class="first"><img src="./images/forecast.png" alt="Forecast" class="forecast-img ">
+                Universitet proqnozlaşdırması</div>
+            <div id="mainApplyCard">
+                <img src="./images/apply.png" alt="Apply" class="apply-img">
+                Universitetə müraciət
+            </div>
+            <div class="letter">
+                <img src="./images/letter.png" alt="Letter" class="letter-img">
+                Motivasiya məktubu
+            </div>
+            <div class="consultation">
+                <img src="./images/conversation.png" alt="Conversation" class="conversation-img">
+                Konsultasiya
+            </div>
         </section>
 
         <h2 class="why-we-title">Niyə EduPath?</h2>
         <section class="why-we">
-            
+
             <div>
-                
-                <p>EduPath, təhsil sahəsindəki təcrübəsi və geniş əlaqələri ilə tələbələrə ən yaxşı universitetləri seçməkdə və müraciət prosesində dəstək verir. Bizim xidmətlərimiz, tələbələrin akademik və şəxsi potensialını maksimum dərəcədə ortaya çıxarmağa kömək edir.</p>
+                <p>EduPath, təhsil sahəsindəki təcrübəsi və geniş əlaqələri ilə tələbələrə ən yaxşı universitetləri
+                    seçməkdə və müraciət prosesində dəstək verir. Bizim xidmətlərimiz, tələbələrin akademik və şəxsi
+                    potensialını maksimum dərəcədə ortaya çıxarmağa kömək edir.</p>
             </div>
             <div>
                 <h2>99% Uğurlu Qəbul Nisbəti</h2>
@@ -95,25 +102,26 @@
             </div>
             <div>
                 <h2>Peşəkar Konsultasiya</h2>
-                <p>Xaricdə təhsil yolunda hər bir tələbəyə fərdi yanaşırıq. Təcrübəli komandamız sayəsində hədəflərinizə və büdcənizə ən uyğun universitet və proqramı birlikdə seçirik</p>
+                <p>Xaricdə təhsil yolunda hər bir tələbəyə fərdi yanaşırıq. Təcrübəli komandamız sayəsində hədəflərinizə
+                    və büdcənizə ən uyğun universitet və proqramı birlikdə seçirik</p>
             </div>
             <div>
                 <h2>Məktub və Sənədləşmədə Dəqiqlik</h2>
-                <p>Motivasiya və tövsiyə məktublarının (SOP) beynəlxalq standartlara uyğun, unikal şəkildə hazırlanmasına kömək edir, sənədləşmə xətalarının qarşısını alırıq.</p>
+                <p>Motivasiya və tövsiyə məktublarının (SOP) beynəlxalq standartlara uyğun, unikal şəkildə
+                    hazırlanmasına kömək edir, sənədləşmə xətalarının qarşısını alırıq.</p>
             </div>
             <div>
                 <h2>Geniş Ölkə və Universitet Seçimi</h2>
-                <p>"Amerika, Avropa və Asiyanın köklü universitetlərində yüzlərlə bakalavr, magistr və dil kursu proqramı təklif edirik. Profilinizə və büdcənizə ən uyğun təqaüdlü (burs) imkanları araşdırır, qlobal karyera qapılarını sizin üçün açırıq</p>
+                <p>"Amerika, Avropa və Asiyanın köklü universitetlərində yüzlərlə bakalavr, magistr və dil kursu
+                    proqramı təklif edirik. Profilinizə və büdcənizə ən uyğun təqaüdlü (burs) imkanları araşdırır,
+                    qlobal karyera qapılarını sizin üçün açırıq</p>
             </div>
             <div></div>
             <div></div>
         </section>
 
-           <!-- online ofline -->
-           <!-- <div></div>
-           <div></div> -->
-        
     </main>
     <script src="./script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödənişsiz Akademik Konsultasiya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./consultation.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="close-btn" id="closePageBtn">&times;</div>
+        <button class="back-btn" id="backBtn"><i class="fa-solid fa-arrow-left"></i> Geri qayıt</button>
+        
+        <h2>Ödənişsiz Konsultasiya</h2>
+        <p class="subtitle">Xaricdə təhsil yolunda ağlınızdakı bütün sualları peşəkar mentorlarla birlikdə aydınlaşdırın.</p>
+
+        <div class="features-list">
+            
+            <div class="feature-item">
+                <i class="fa-solid fa-circle-question"></i>
+                <div class="feature-text">
+                    <strong>Suallarınıza tam cavab tapın:</strong> Universitet seçimi, viza prosedurları və müraciət mərhələləri ilə bağlı qaranlıq qalan hər bir məqama aydınlıq gətirilir.
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <i class="fa-solid fa-compass"></i>
+                <div class="feature-text">
+                    <strong>Şəxsi strategiyanın qurulması:</strong> Hazırkı GPA, IELTS ballarınız və gələcək hədəfləriniz dürüst şəkildə analiz edilərək sizə ən uyğun ölkələr təyin olunur.
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <div class="feature-text">
+                    <strong>Təqaüd imkanlarının dəyərləndirilməsi:</strong> Büdcənizə uyğun universitetlər və tam və ya qismən maliyyə dəstəyi (təqaüd) ala biləcəyiniz proqramlar araşdırılır.
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <i class="fa-solid fa-bullseye"></i>
+                <div class="feature-text">
+                    <strong>Real layihə analizi:</strong> Motivasiya məktubunda və CV-də hansı real layihələrinizi (məsələn, Python və ya veb layihələrinizi) ön plana çıxarmalı olduğunuz müəyyən edilir.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="action-container">
+            <a href="./apply.html" class="action-btn">
+                <i class="fa-solid fa-calendar-check" style="margin-right: 8px;"></i> Konsultasiya üçün Qeydiyyatdan Keç
+            </a>
+        </div>  
+    </div>
+
+    <script>
+        // Ana səhifəyə qayıtmaq üçün funksiyalar
+        const goToHome = () => {
+            window.location.href = "./index.html";
+        };
+
+        document.getElementById("closePageBtn").addEventListener("click", goToHome);
+        document.getElementById("backBtn").addEventListener("click", goToHome);
+    </script>
+</body>
+</html>
